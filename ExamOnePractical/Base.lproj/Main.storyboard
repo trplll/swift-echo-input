@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExamOnePractical" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-du-TdH">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJX-OE-pBw">
+                                <rect key="frame" x="308" y="86" width="272" height="32"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClearUserInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CnZ-Zw-2V1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eih-rA-hFa">
+                                <rect key="frame" x="20" y="173" width="560" height="0.0"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywG-ON-tXW">
+                                <rect key="frame" x="20" y="86" width="273" height="32"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Echo"/>
+                                <connections>
+                                    <action selector="btnEchoUserInput:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35C-rL-qXB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R9Q-du-TdH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="53R-gT-9VI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qJX-OE-pBw" secondAttribute="trailing" id="7Cm-Ba-7MU"/>
+                            <constraint firstItem="eih-rA-hFa" firstAttribute="top" secondItem="ywG-ON-tXW" secondAttribute="bottom" constant="55" id="EwD-Ln-i5S"/>
+                            <constraint firstItem="ywG-ON-tXW" firstAttribute="top" secondItem="qJX-OE-pBw" secondAttribute="top" id="J11-HQ-gnx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ywG-ON-tXW" secondAttribute="leading" id="Ryv-EU-ciN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R9Q-du-TdH" secondAttribute="trailing" id="WB6-Dg-QHg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eih-rA-hFa" secondAttribute="trailing" id="gnw-aS-Eb4"/>
+                            <constraint firstItem="ywG-ON-tXW" firstAttribute="width" secondItem="qJX-OE-pBw" secondAttribute="width" id="hhY-zy-ScN"/>
+                            <constraint firstItem="ywG-ON-tXW" firstAttribute="height" secondItem="qJX-OE-pBw" secondAttribute="height" id="snp-et-DQn"/>
+                            <constraint firstItem="ywG-ON-tXW" firstAttribute="top" secondItem="R9Q-du-TdH" secondAttribute="bottom" constant="28" id="u2X-3Q-1Ej"/>
+                            <constraint firstItem="qJX-OE-pBw" firstAttribute="leading" secondItem="ywG-ON-tXW" secondAttribute="trailing" constant="15" id="uDw-Qb-SM7"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="R9Q-du-TdH" secondAttribute="leading" id="xfd-5w-no2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eih-rA-hFa" secondAttribute="leading" id="zEM-ps-fy7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblDisplayInput" destination="eih-rA-hFa" id="mIA-nZ-826"/>
+                        <outlet property="txtUserInput" destination="R9Q-du-TdH" id="tVM-fk-SCr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="441" y="381"/>
         </scene>
     </scenes>
 </document>
