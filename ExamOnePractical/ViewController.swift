@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     //create variables to connect to storyboard outlets
     @IBOutlet weak var lblDisplayInput: UILabel!
     @IBOutlet weak var txtUserInput: UITextField!
@@ -36,7 +34,6 @@ class ViewController: UIViewController {
         //clear lblDipslayInputs text property
         lblDisplayInput.text=" "
     }
-    
-    
+        
 }
 
